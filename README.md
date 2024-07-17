@@ -15,5 +15,11 @@ Designing and programming circuit that contain ESP with sensor or any electrical
 - <code style="color: green">I2C LCD screen</code> -> is a type of liquid crystal display (LCD) that uses the I2C (Inter-Integrated Circuit) protocol for communication. This allows for easier connections and reduced wiring compared to traditional LCD setups.
 
 --------------------------------------
-###
+### Humidity and Temperature measuring:
+Hardware Required:
+1. ESP 32
+2. DHT22 sensor
+3. I2C LCD screen<br>
+
+
 ![Screenshot 2024-07-16 220615](https://github.com/user-attachments/assets/ccb91f60-0509-47a3-8293-9536e8f4868a)
