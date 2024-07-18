@@ -23,3 +23,42 @@ Hardware Required:
 
 
 ![Screenshot 2024-07-16 220615](https://github.com/user-attachments/assets/ccb91f60-0509-47a3-8293-9536e8f4868a)
+
+``` C++
+#include <DHT.h>                      // Libary for DHT22
+#include <LiquidCrystal_I2C.h>       // Libary for LCD
+#define DHT_PIN 15                  // define the connection pin
+#define DHT_Type DHT22             // define the type of the DHT if its DHT22 or DHT11
+DHT dht(DHT_PIN,DHT_Type);        // Creation of DHT object instance
+LiquidCrystal_I2C lcd(0x27,16,2);  // I2C address 0x27, 16 column and 2 row
+
+void setup(){
+  lcd.init();                    // initialize the lcd
+  lcd.backlight();              // open the backlight
+  
+  dht.begin();                // start DHT
+
+}
+
+void loop(){
+  lcd.clear();                      // clear display
+  float t = dht.readTemperature(); // read the temperature and assian it to the varible t as a float number
+  float h = dht.readHumidity();   // read the humidity and assian it to the varible h as a float number
+  lcd.setCursor(1,0);          // move cursor to  (1, 0)
+  lcd.print("Measuring...");  // print message at (1, 0)
+  delay(4000);               // display the above for four seconds
+  lcd.clear();
+  lcd.setCursor(1,0);
+  lcd.print("Temerature");
+  lcd.setCursor(1,1);
+  lcd.print(String(t) + " deg C"); // print the value of t and we assain it to 
+  delay(4000);
+  lcd.clear();
+  lcd.setCursor(1,0);
+  lcd.print("Humidity");
+  lcd.setCursor(1,1);
+  lcd.print(String(h) + "%");
+  delay(4000);
+  
+}
+~~~
