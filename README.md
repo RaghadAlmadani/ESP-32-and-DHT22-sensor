@@ -1,6 +1,6 @@
 # ESP-32-and-DHT22-sensor
 Designing and programming circuit that contain ESP with sensor or any electrical component using [Wokwi](https://wokwi.com/).
-### Ddefintions:
+### Definitions:
 <img src="https://www.crowdsupply.com/img/76e8/wokwi-logo_png_organization-profile.png" width="200" />
 
 - <code style="color: yallow">Wokwi</code> -> is an online platform that provides a simulation environment for developing and testing Arduino and ESP32 projects. It allows users to create virtual circuits and simulate their behavior without the need for physical hardware.
